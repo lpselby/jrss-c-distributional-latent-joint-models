@@ -23,7 +23,6 @@ scmm_rds <- "scmm_surface_gam.rds"
 # load SCMM surface
 scmm_fit <- readRDS(scmm_rds)
 
-#STOPPED RUNNING CODE BELOW (LINE 36-183) AFTER 21.5 HOURS
 # functions to simulate Z under different scenarios
 simulate_Z_sas <- function(mu, logsig2, alpha, kappa, n) {
   sigma <- sqrt(exp(logsig2))
@@ -172,6 +171,7 @@ for (sc in scenarios) {
   # save intermediate
   saveRDS(results, file=paste0("sim_results_", sc, ".rds"))
 } # end scenario loop
+
 
 
 
